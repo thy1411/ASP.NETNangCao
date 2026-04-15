@@ -1,0 +1,25 @@
+﻿@model Lab01.Models.PersonViewModel
+
+<h2>THÔNG TIN ĐĂNG KÝ</h2>
+<hr />
+
+<form asp-action="XuLy" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label>Họ tên</label>
+        <input asp-for="hoten" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Ngày sinh</label>
+        <input asp-for="ngaysinh" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Hình đại diện</label>
+        <input name="FHinh" type="file" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Đăng ký</button>
+
+</form>

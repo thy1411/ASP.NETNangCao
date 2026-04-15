@@ -1,0 +1,29 @@
+﻿@model MayTinh
+<h3>Tính toán đơn giản</h3>
+<hr />
+<form action="/MayTinh/TinhToan" method="post">
+    <div class="form-group" >
+        Nhập số 1: <input type="text" asp-for="so1" class="form-control" />
+    </div>
+
+    <div class="form-group" >
+        Nhập số 2: <input type="text" asp-for="so2" class="form-control" />
+    </div>
+
+    <div class="form-group" >
+        Chọn phép tính: <select asp-for="pheptinh" class="form-control">
+            <option value="+">Cộng</option>
+            <option value="-">Trừ</option>
+            <option value="*">Nhân</option>
+            <option value="/">Chia</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Tính</button>
+</form>
+@if(ViewBag.KQ != null)
+{
+    <hr />
+    <div class="alert alert-success">
+        <h3>Kết quả: @ViewBag.KQ</h3>
+    </div>
+}
