@@ -1,0 +1,22 @@
+﻿@model List<Product>
+
+<h2>Danh sách sản phẩm</h2>
+
+<a href="/Product/Create" class="btn btn-primary">Thêm sản phẩm</a>
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>
