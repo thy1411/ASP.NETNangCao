@@ -20,8 +20,14 @@ namespace Lab02.Controllers
 
         public IActionResult Create(Product p)
         {
-            dsSanPham.Add(p);
-            return RedirectToAction("Index");
+            
+            if (ModelState.IsValid)
+            {
+                dsSanPham.Add(p);
+                return RedirectToAction("Index");
+
+            }
+            return View(p);
         }
     }
 }
