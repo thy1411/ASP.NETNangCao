@@ -16,7 +16,7 @@
         <tr>
             <td>@item.Id</td>
             <td>@item.Name</td>
-            <td>@item.Price VNĐ</td>
+            <td>@Html.FormatValue(item.Price,"{0:#,##0} vnd")</td>
         </tr>
     }
 </table>
